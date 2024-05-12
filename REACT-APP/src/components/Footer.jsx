@@ -6,7 +6,7 @@ function Footer() {
       <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
           <span className="navbar-text">
-            Created by ALFA : ISO 9001-2024
+            Created by ALFA : tutor yasir ali khan
           </span>
         </div>
       </nav>
