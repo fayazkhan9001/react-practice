@@ -53,6 +53,11 @@ function Header() {
                     </a>
                   </li>
                   <li>
+                    <a className="dropdown-item" href="#">
+                      Another action2
+                    </a>
+                  </li>
+                  <li>
                     <hr className="dropdown-divider" />
                   </li>
                 </ul>
