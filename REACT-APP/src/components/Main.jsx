@@ -5,7 +5,7 @@ function Main({products}) {
   return (
     <div className='row'>
        {
-        products.map((product)=><Card product={product} />)
+        products.map((product, indexNumber)=><Card key={indexNumber} product={product} />)
        }
     </div>
   )
