@@ -1,31 +1,30 @@
-import { useEffect, useState } from "react"
-import Home from "./pages/Home"
+import React from 'react'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 
-function App() {
-  let [products, setProducts] = useState([]);
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 
-  let [n, setN] = useState(0);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path="home" element={<Home />} />
+      <Route path="about" element={<About />} />
+    </Route>
+  )
+);
 
-useEffect(()=>{
-  let prods = JSON.parse(window.localStorage.getItem("Products"));
-   setProducts( prods);
-  
-}, [])
 
-let handleClick = ()=>{
-  setN(++n);
-}
-
+export default function App() {
 
   return (
-    <>
-    <h1>{n}</h1>
-     <button onClick={handleClick}>click</button>
-
-     <Home products = {products} />
-  
-    </>
+    <div>
+       <RouterProvider router={router}/>
+    </div>
   )
 }
-
-export default App
